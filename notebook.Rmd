@@ -1,0 +1,26 @@
+---
+title: "notebook1"
+author: "{{cookiecutter.author_name}}"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Intro
+
+Some text here. I am not a user of notebooks so I am unsure what should go here.
+
+## Code
+
+```{r project imports}
+# imports -----------------------------------------------------------------
+source("imports.R") # this also imports utils.R (first)
+# params ------------------------------------------------------------------
+source("params.R")
+```
+
+
+

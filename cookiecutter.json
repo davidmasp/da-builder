@@ -1,0 +1,6 @@
+{
+  "project_name": "analysis",
+  "author_name": "DMP",
+  "aim": "The aim of this cool new project is ...",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}"
+}
