@@ -20,7 +20,7 @@ current_dir = getwd()
 results_path = fs::path(current_dir,"results","{{cookiecutter.project_name}}",today)
 results_path_lt = fs::path(current_dir,"results","{{cookiecutter.project_name}}","latest")
 tables_path = fs::path(current_dir,"tables","{{cookiecutter.project_name}}",today)
-tables_path = fs::path(current_dir,"tables","{{cookiecutter.project_name}}","latest")
+tables_path_lt = fs::path(current_dir,"tables","{{cookiecutter.project_name}}","latest")
 figures_path = fs::path(current_dir,"figures","{{cookiecutter.project_name}}",today)
 figures_path_lt = fs::path(current_dir,"figures","{{cookiecutter.project_name}}","latest")
 
