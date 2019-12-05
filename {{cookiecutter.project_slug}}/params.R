@@ -30,3 +30,7 @@ fs::dir_create(results_path_lt)
 fs::dir_create(tables_path)
 fs::dir_create(figures_path)
 fs::dir_create(figures_path_lt)
+
+params_hash = tools::md5sum("params.R")
+getParamsTable(toFile = fs::path(results_path,glue::glue("{params_hash}.json")))
+getParamsTable(toFile = fs::path(results_path_lt,glue::glue("{params_hash}.json")))
