@@ -24,3 +24,17 @@ check_deps <- function(){
     stopifnot(all(unlist(lapply(deps,requireNamespace))))
 }
 
+getParamsTable <- function(toFile) {
+  obj = ls(envir = .GlobalEnv)
+  mask = grepl(pattern = "params",x = obj)
+
+  params_values = sapply(X = obj[mask], get)
+
+  jsonlite::toJSON(x = params_values,
+                   auto_unbox = TRUE,
+                   pretty = TRUE) -> json_text
+
+  readr::write_lines(x = json_text,path = toFile)
+
+}
+
